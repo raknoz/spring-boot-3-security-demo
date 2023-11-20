@@ -1,4 +1,4 @@
-package com.example.demo.enums;
+package com.example.demo.user;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -9,14 +9,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.example.demo.enums.Permission.ADMIN_CREATE;
-import static com.example.demo.enums.Permission.ADMIN_DELETE;
-import static com.example.demo.enums.Permission.ADMIN_READ;
-import static com.example.demo.enums.Permission.ADMIN_UPDATE;
-import static com.example.demo.enums.Permission.MANAGER_CREATE;
-import static com.example.demo.enums.Permission.MANAGER_DELETE;
-import static com.example.demo.enums.Permission.MANAGER_READ;
-import static com.example.demo.enums.Permission.MANAGER_UPDATE;
+import static com.example.demo.user.Permission.ADMIN_CREATE;
+import static com.example.demo.user.Permission.ADMIN_DELETE;
+import static com.example.demo.user.Permission.ADMIN_READ;
+import static com.example.demo.user.Permission.ADMIN_UPDATE;
+import static com.example.demo.user.Permission.MANAGER_CREATE;
+import static com.example.demo.user.Permission.MANAGER_DELETE;
+import static com.example.demo.user.Permission.MANAGER_READ;
+import static com.example.demo.user.Permission.MANAGER_UPDATE;
 
 @RequiredArgsConstructor
 public enum Role {

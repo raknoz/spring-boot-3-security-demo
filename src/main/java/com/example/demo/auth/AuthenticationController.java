@@ -1,9 +1,9 @@
-package com.example.demo.controllers;
+package com.example.demo.auth;
 
-import com.example.demo.requests.AuthenticationRequest;
-import com.example.demo.requests.RegisterRequest;
-import com.example.demo.responses.AuthenticationResponse;
-import com.example.demo.servicies.AuthenticationService;
+import com.example.demo.auth.AuthenticationRequest;
+import com.example.demo.user.RegisterRequest;
+import com.example.demo.auth.AuthenticationResponse;
+import com.example.demo.auth.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

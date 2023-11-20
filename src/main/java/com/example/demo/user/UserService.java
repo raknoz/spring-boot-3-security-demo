@@ -1,8 +1,5 @@
-package com.example.demo.servicies;
+package com.example.demo.user;
 
-import com.example.demo.repositories.UserRepository;
-import com.example.demo.requests.ChangePasswordRequest;
-import com.example.demo.models.User;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

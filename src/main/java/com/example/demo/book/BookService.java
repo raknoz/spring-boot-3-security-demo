@@ -1,8 +1,5 @@
-package com.example.demo.servicies;
+package com.example.demo.book;
 
-import com.example.demo.models.Book;
-import com.example.demo.repositories.BookRepository;
-import com.example.demo.requests.BookRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

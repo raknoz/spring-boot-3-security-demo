@@ -1,13 +1,12 @@
-package com.example.demo.servicies;
+package com.example.demo.auth;
 
-import com.example.demo.enums.TokenType;
-import com.example.demo.models.Token;
-import com.example.demo.models.User;
-import com.example.demo.repositories.TokenRepository;
-import com.example.demo.repositories.UserRepository;
-import com.example.demo.requests.AuthenticationRequest;
-import com.example.demo.requests.RegisterRequest;
-import com.example.demo.responses.AuthenticationResponse;
+import com.example.demo.token.LogoutService;
+import com.example.demo.token.TokenType;
+import com.example.demo.token.Token;
+import com.example.demo.user.User;
+import com.example.demo.token.TokenRepository;
+import com.example.demo.user.UserRepository;
+import com.example.demo.user.RegisterRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -26,7 +25,7 @@ public class AuthenticationService {
   private final UserRepository repository;
   private final TokenRepository tokenRepository;
   private final PasswordEncoder passwordEncoder;
-  private final JwtService jwtService;
+  private final LogoutService.JwtService jwtService;
   private final AuthenticationManager authenticationManager;
   
   public AuthenticationResponse register(final RegisterRequest request) {

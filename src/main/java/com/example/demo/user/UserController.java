@@ -1,7 +1,5 @@
-package com.example.demo.controllers;
+package com.example.demo.user;
 
-import com.example.demo.requests.ChangePasswordRequest;
-import com.example.demo.servicies.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RequestBody;

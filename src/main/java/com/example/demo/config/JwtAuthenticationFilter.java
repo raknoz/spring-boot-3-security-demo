@@ -1,7 +1,7 @@
 package com.example.demo.config;
 
-import com.example.demo.repositories.TokenRepository;
-import com.example.demo.servicies.JwtService;
+import com.example.demo.token.LogoutService;
+import com.example.demo.token.TokenRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +22,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-  private final JwtService jwtService;
+  private final LogoutService.JwtService jwtService;
   private final UserDetailsService userDetailsService;
   private final TokenRepository tokenRepository;
 

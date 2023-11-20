@@ -1,8 +1,5 @@
-package com.example.demo.controllers;
+package com.example.demo.book;
 
-import com.example.demo.models.Book;
-import com.example.demo.requests.BookRequest;
-import com.example.demo.servicies.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

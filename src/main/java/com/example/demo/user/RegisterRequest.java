@@ -1,6 +1,6 @@
-package com.example.demo.requests;
+package com.example.demo.user;
 
-import com.example.demo.enums.Role;
+import com.example.demo.user.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

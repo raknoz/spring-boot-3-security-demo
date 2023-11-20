@@ -1,4 +1,4 @@
-package com.example.demo.requests;
+package com.example.demo.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

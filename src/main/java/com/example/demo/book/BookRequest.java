@@ -1,4 +1,4 @@
-package com.example.demo.requests;
+package com.example.demo.book;
 
 import lombok.Builder;
 import lombok.Getter;

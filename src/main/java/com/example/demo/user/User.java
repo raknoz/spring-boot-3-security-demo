@@ -1,6 +1,6 @@
-package com.example.demo.models;
+package com.example.demo.user;
 
-import com.example.demo.enums.Role;
+import com.example.demo.token.Token;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
