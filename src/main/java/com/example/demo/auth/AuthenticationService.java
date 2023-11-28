@@ -1,12 +1,13 @@
 package com.example.demo.auth;
 
+import com.example.demo.exceptions.UserAlreadyExistException;
 import com.example.demo.token.LogoutService;
-import com.example.demo.token.TokenType;
 import com.example.demo.token.Token;
-import com.example.demo.user.User;
 import com.example.demo.token.TokenRepository;
-import com.example.demo.user.UserRepository;
+import com.example.demo.token.TokenType;
 import com.example.demo.user.RegisterRequest;
+import com.example.demo.user.User;
+import com.example.demo.user.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -27,8 +28,13 @@ public class AuthenticationService {
   private final PasswordEncoder passwordEncoder;
   private final LogoutService.JwtService jwtService;
   private final AuthenticationManager authenticationManager;
-  
+
   public AuthenticationResponse register(final RegisterRequest request) {
+
+    if (repository.findByEmail(request.getEmail()).isPresent()) {
+      throw new UserAlreadyExistException();
+    }
+
     var user = User.builder()
         .firstname(request.getFirstname())
         .lastname(request.getLastname())

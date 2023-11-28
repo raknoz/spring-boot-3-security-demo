@@ -52,6 +52,8 @@ public class SecurityConfiguration {
                 .requestMatchers(POST, "/api/v1/management/**").hasAnyAuthority(ADMIN_CREATE.name(), MANAGER_CREATE.name())
                 .requestMatchers(PUT, "/api/v1/management/**").hasAnyAuthority(ADMIN_UPDATE.name(), MANAGER_UPDATE.name())
                 .requestMatchers(DELETE, "/api/v1/management/**").hasAnyAuthority(ADMIN_DELETE.name(), MANAGER_DELETE.name())
+                // If there's a custom authorizeHttpRequests, the default security rules are disabled. Therefore, you need to explicitly redefine them.
+                .requestMatchers("/error").permitAll()
                 .anyRequest()
                 .authenticated()
         )
